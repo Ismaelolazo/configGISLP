@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: keycloak
+
+server:
+  port: 8090
+
+logging:
+  level:
+    org.keycloak: INFO
