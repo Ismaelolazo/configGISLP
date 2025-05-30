@@ -11,6 +11,12 @@ spring:
             - Path=/api/puntos-interes/**
           filters:
             - StripPrefix=2
+        - id: usuario-service
+          uri: lb://usuario-service
+          predicates:
+            - Path=/api/usuarios/** 
+          filters:
+            - StripPrefix=2 
 
   security:
     oauth2:
