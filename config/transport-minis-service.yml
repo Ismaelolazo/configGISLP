@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: transport-minis-service
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/gis
+    username: postgres
+    password: 133133
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+  main:
+    web-application-type: servlet
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/gis-lapaz
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    preferIpAddress: true
+
+logging:
+  level:
+    org.springframework.security: TRACE
+    org.springframework.web: DEBUG
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+    org.springframework.boot.autoconfigure.security: DEBUG
+    org.springframework.security.oauth2.jwt: TRACE
