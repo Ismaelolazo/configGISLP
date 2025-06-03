@@ -1,6 +1,6 @@
 spring:
   application:
-    name: transport-minis-service
+    name: transport-service
 
   datasource:
     url: jdbc:postgresql://postgres:5432/gis
