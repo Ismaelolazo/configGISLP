@@ -12,8 +12,8 @@ eureka:
     leaseExpirationDurationInSeconds: 5
 logging:
   level:
-    org.springframework.cloud.config.server: DEBUG
-    org.springframework.web: DEBUG
+    org.springframework.cloud.config.server: TRACE
+    org.springframework.web: TRACE
 
 ---
 spring.config.activate.on-profile: docker
