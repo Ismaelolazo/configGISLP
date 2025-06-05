@@ -10,7 +10,10 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 5
-
+logging:
+  level:
+    org.springframework.cloud.config.server: DEBUG
+    org.springframework.web: DEBUG
 
 ---
 spring.config.activate.on-profile: docker
