@@ -29,6 +29,11 @@ spring:
             - Path=/puntos-service/**
           filters:
             - StripPrefix=1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+
 
 
 # Configuración para exponer endpoints de administración
