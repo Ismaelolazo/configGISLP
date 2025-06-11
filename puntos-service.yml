@@ -34,11 +34,11 @@ spring:
   main:
     web-application-type: servlet
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:8080/realms/gis-lapaz
+  #security:
+    #oauth2:
+      #resourceserver:
+        #jwt:
+         # issuer-uri: http://keycloak:8080/realms/gis-lapaz
 
 springdoc:
   api-docs:
