@@ -10,7 +10,8 @@ spring:
           predicates:
             - Path=/api/puntos-interes/**
             - Path=/api/health/**
-  
+          filters:
+            - StripPrefix=2
         - id: usuario-service
           uri: lb://usuario-service
           predicates:
