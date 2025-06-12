@@ -9,6 +9,7 @@ spring:
           uri: lb://puntos-service
           predicates:
             - Path=/api/puntos-interes/**
+            - Path=/api/health/**
           filters:
             - StripPrefix=2
         - id: usuario-service
