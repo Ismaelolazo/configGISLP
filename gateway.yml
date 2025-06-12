@@ -25,11 +25,11 @@ spring:
           filters:
             - StripPrefix=2
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://keycloak:8080/realms/gis-lapaz
+  #security:
+  #  oauth2:
+  #    resourceserver:
+  #      jwt:
+  #        issuer-uri: http://keycloak:8080/realms/gis-lapaz
 
 eureka:
   client:
