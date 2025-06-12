@@ -17,6 +17,12 @@ spring:
             - Path=/api/usuarios/** 
           filters:
             - StripPrefix=2 
+        - id: transport-service
+          uri: lb://transport-service
+          predicates:
+            - Path=/api/transport/**
+          filters:
+            - StripPrefix=2
 
   security:
     oauth2:
