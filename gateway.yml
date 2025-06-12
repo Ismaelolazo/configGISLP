@@ -45,5 +45,8 @@ server:
 
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG
     org.springframework.security: TRACE
+    org.springframework.security.web.server: TRACE
+    org.springframework.security.config: TRACE
+    org.springframework.web: TRACE
+
